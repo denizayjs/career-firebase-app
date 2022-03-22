@@ -9,8 +9,8 @@
   background-color: white;
   padding: 10px;
   padding-bottom: 20px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .feed__input {
@@ -43,6 +43,5 @@
   background-color: white;
   display: flex;
   justify-content: space-evenly;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  padding-top: 20px;
 }
