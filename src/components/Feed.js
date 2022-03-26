@@ -72,6 +72,7 @@ const Feed = () => {
           />
         </div>
       </div>
+      <hr />
       {posts?.map(({ id, item }) => (
         <Post
           key={id}
