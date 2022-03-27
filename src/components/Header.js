@@ -13,8 +13,11 @@ import { useDispatch } from "react-redux";
 import { logout } from "../features/userSlice";
 import { auth } from "../firebase";
 import { signOut } from "firebase/auth";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
 const Header = () => {
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
   const logoutApp = () => {
     dispatch(logout());
@@ -35,7 +38,11 @@ const Header = () => {
         <HeaderOption Icon={BusinessCenter} title="jobs" />
         <HeaderOption Icon={Chat} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notifications" />
-        <HeaderOption avatar="logo192.png" title="me" onClick={logoutApp} />
+        <HeaderOption
+          avatar={user?.photoUrl ? user?.photoUrl : "logo192.png"}
+          title={user?.displayname ? user?.displayname : "me"}
+          onClick={logoutApp}
+        />
       </div>
     </div>
   );
