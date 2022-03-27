@@ -5,8 +5,8 @@
   background-color: white;
   justify-content: space-evenly;
   border-bottom: 0.1px solid lightgray;
-  padding: 10px;
-  width: 100%;
+  padding-top: 10px;
+  width: 100vw;
   z-index: 999;
 }
 

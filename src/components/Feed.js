@@ -16,14 +16,17 @@ import {
   addDoc,
   serverTimestamp,
 } from "firebase/firestore";
+import { useSelector } from "react-redux";
+import { selectUser } from "../features/userSlice";
 
 const Feed = () => {
+  const user = useSelector(selectUser);
   const [posts, setPosts] = useState([]);
   const [input, setInput] = useState("");
   useEffect(() => {
     getPosts();
   }, []);
-  const getPosts = () => {
+  const getPosts = async () => {
     getDocs(collection(db, "posts")).then((item) => {
       setPosts(
         item.docs.map((doc) => ({
@@ -34,13 +37,13 @@ const Feed = () => {
     });
   };
 
-  const sendPost = (e) => {
+  const sendPost = async (e) => {
     e.preventDefault();
     addDoc(collection(db, "posts"), {
-      name: "Deniz AY",
+      name: user.displayname,
       description: "This is test",
       message: input,
-      photoUrl: "",
+      photoUrl: user?.photoUrl,
       timestamp: serverTimestamp(),
     });
     getPosts();

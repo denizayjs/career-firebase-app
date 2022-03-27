@@ -9,8 +9,17 @@ import {
 } from "@material-ui/icons";
 import "./Header.css";
 import HeaderOption from "./HeaderOption";
+import { useDispatch } from "react-redux";
+import { logout } from "../features/userSlice";
+import { auth } from "../firebase";
+import { signOut } from "firebase/auth";
 
 const Header = () => {
+  const dispatch = useDispatch();
+  const logoutApp = () => {
+    dispatch(logout());
+    signOut(auth);
+  };
   return (
     <div className="header">
       <div className="header__left">
@@ -26,7 +35,7 @@ const Header = () => {
         <HeaderOption Icon={BusinessCenter} title="jobs" />
         <HeaderOption Icon={Chat} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notifications" />
-        <HeaderOption avatar="logo192.png" title="me" />
+        <HeaderOption avatar="logo192.png" title="me" onClick={logoutApp} />
       </div>
     </div>
   );

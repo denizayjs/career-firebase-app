@@ -23,6 +23,7 @@
   border-top-right-radius: 10px;
   background-color: white;
   padding-bottom: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sidebar__top > img {
@@ -50,6 +51,7 @@
   background-color: white;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .sidebar__stat {
   margin-top: 10px;
@@ -75,6 +77,7 @@
   background-color: white;
   border-radius: 10px;
   margin-top: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .sidebar__bottom > p {
