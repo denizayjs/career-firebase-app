@@ -4,8 +4,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ![image](https://user-images.githubusercontent.com/29174043/160363258-f6767c76-0093-4e0a-b58b-c83438a66160.png)
 
---- Login and Logout with Firebase Authantication <br/>
---- Publish post with Firebase Firestore Database
+--- Login and Logout with Firebase Authentication <br/>
+--- Publish a post with Firebase Firestore Database
 
 ## Available Scripts
 
