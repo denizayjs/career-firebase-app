@@ -1,10 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+
 ![image](https://user-images.githubusercontent.com/29174043/160363328-06648c43-858c-4069-acbf-be4c922b7fe6.png)
 
 ![image](https://user-images.githubusercontent.com/29174043/160363258-f6767c76-0093-4e0a-b58b-c83438a66160.png)
 
----Login and Logout with Firebase Authantication
----Publish post with Firebase Firestore Database
+--- Login and Logout with Firebase Authantication <br/>
+--- Publish post with Firebase Firestore Database
 
 ## Available Scripts
 
