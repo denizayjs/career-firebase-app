@@ -40,10 +40,10 @@ const Feed = () => {
   const sendPost = async (e) => {
     e.preventDefault();
     addDoc(collection(db, "posts"), {
-      name: user.displayname,
+      name: user.displayName,
       description: "This is test",
       message: input,
-      photoUrl: user?.photoUrl,
+      photoURL: user?.photoURL,
       timestamp: serverTimestamp(),
     });
     getPosts();
@@ -82,7 +82,7 @@ const Feed = () => {
           name={item.name}
           description={item.description}
           message={item.message}
-          photoUrl={item.photoUrl}
+          photoUrl={item.photoURL}
         />
       ))}
     </div>

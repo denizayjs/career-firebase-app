@@ -20,16 +20,17 @@ const Login = () => {
     if (!name) return alert("Please enter a Full Name");
     await createUserWithEmailAndPassword(auth, email, password).then(
       (userAuth) => {
-        updateProfile(userAuth.user.auth.currentUser, {
-          displayname: name,
+        console.log(userAuth);
+        updateProfile(userAuth.user, {
+          displayName: name,
           photoURL: profilePic,
         }).then(() => {
           dispatch(
             login({
               email: userAuth.user.email,
               uid: userAuth.user.uid,
-              displayname: name,
-              photoUrl: profilePic,
+              displayName: name,
+              photoURL: profilePic,
             })
           );
         });
@@ -44,8 +45,8 @@ const Login = () => {
           login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
-            displayname: userAuth.user.name,
-            photoUrl: userAuth.user.photoUrl,
+            displayName: userAuth.user.displayName,
+            photoURL: userAuth.user.photoURL,
           })
         );
       })

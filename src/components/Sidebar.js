@@ -16,8 +16,8 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar__top">
         <img src="logo192.png" alt="Background" />
-        <Avatar src={user?.photoUrl} className="sidebar__avatar" />
-        <h2>{user.displayname}</h2>
+        <Avatar src={user?.photoURL} className="sidebar__avatar" />
+        <h2>{user.displayName}</h2>
         <h4>{user.email}</h4>
       </div>
       <div className="sidebar__stats">

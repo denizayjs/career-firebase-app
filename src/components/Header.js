@@ -39,8 +39,8 @@ const Header = () => {
         <HeaderOption Icon={Chat} title="Messaging" />
         <HeaderOption Icon={Notifications} title="Notifications" />
         <HeaderOption
-          avatar={user?.photoUrl ? user?.photoUrl : "logo192.png"}
-          title={user?.displayname ? user?.displayname : "me"}
+          avatar={user?.photoURL ? user.photoURL : "logo192.png"}
+          title={user?.displayName ? user.displayName : "me"}
           onClick={logoutApp}
         />
       </div>
